@@ -8,7 +8,8 @@
       - port no : 8080 (Tomcat)
       - port no : 3306 (MYSQL/Arora )
    - storage : 30 GB
-Connect the instance.
+- Connect the instance.
+---
 - install Git
 ```
 apt install git -y
@@ -22,11 +23,13 @@ usermod -aG docker ubuntu
 newgrp docker
 chmod 777 /var/run/docker.sock
 ```
+---
 ## Clone the Repository
 ```
 git clone https://github.com/abhipraydhoble/ThreeTier-Using-Docker.git
 cd ThreeTier-Using-Docker
 ```
+---
 ## Setup the Database
 - Navigate to the Database repository
 ```
@@ -53,6 +56,7 @@ docker run -d --name my-mysql-container -p 3306:3306 my-mysql-db
 docker ps
 ```
 - **Copy this IP address for the next step.**
+---
 ## Configure Backend
 - Navigate to the backend directory
 ```
@@ -75,7 +79,7 @@ docker build -t my-backend-app .
 ```
 docker images
 ```
-## docker run -d --name my-backend-container -p 8080:8080 my-backend-app
+##  Run the Backend Container
 ```
 docker run -d --name my-backend-container -p 8080:8080 my-backend-app
 ```
@@ -85,6 +89,7 @@ docker run -d --name my-backend-container -p 8080:8080 my-backend-app
 curl http://<INSTANCE_PUBLIC_IP>:8080/student
 ```
 - **Replace ``<INSTANCE_PUBLIC_IP>`` with your server's public IP.**
+---
 ## Configure and Run the Frontend
 - Navigate to the ``frontend`` directory:
 ```
@@ -110,6 +115,7 @@ docker run -d --name my-frontend-container -p 80:80 my-frontend-app
 ```
 docker ps
 ```
+---
 ## Access the Final Application
 - Now, open your browser and go to:
 ```
