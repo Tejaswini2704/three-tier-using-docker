@@ -1,6 +1,7 @@
 # 🐳 Three-Tier Web Application using Docker
 
-This project demonstrates a complete **Three-Tier Web Application** architecture using **Docker containers**. The architecture includes a **front-end (NGINX)**, **application server (Tomcat or Node.js)**, and **back-end database (MySQL)** – all orchestrated using **Docker and Docker Compose**.
+- This project demonstrates a complete **Three-Tier Web Application** architecture using **Docker containers**.
+- The architecture includes a **front-end (NGINX)**, **application server (Tomcat)**, and **back-end database (MySQL)** – all orchestrated using **Docker and Docker Compose**.
 
 ---
 
